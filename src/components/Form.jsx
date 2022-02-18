@@ -2,6 +2,16 @@ import {useState, useEffect} from 'react'
 import ErrorMessage from './ErrorMessage'
 
 const Form = ({ pacientsList, setPacientsList, pacientToUpdate, setPacientToUpdate }) => {
+    
+    const [pacient, setPacient] = useState({
+        petName: '',
+        ownerName: '',
+        email: '',
+        entryDate: '',
+        symptoms: ''
+    })
+
+    const [error, setError] = useState(false)
 
     //Genera un id para el objeto de paciente
     const generateId = () => {
@@ -23,17 +33,6 @@ const Form = ({ pacientsList, setPacientsList, pacientToUpdate, setPacientToUpda
         })
       }
     }, [pacientToUpdate])
-    
-
-    const [pacient, setPacient] = useState({
-        petName: '',
-        ownerName: '',
-        email: '',
-        entryDate: '',
-        symptoms: ''
-    })
-
-    const [error, setError] = useState(false)
 
     //Toma el valor de name en cada caso y le pasa su respectivo value.
     //agregándolo al state de *pacient*

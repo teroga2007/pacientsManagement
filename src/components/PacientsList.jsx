@@ -2,7 +2,7 @@ import PacientInfo from './PacientInfo'
 
 const PacientsList = ({pacientsList, setPacient, deletePacient}) => {
   return (
-    <div className='md:w-1/2 lg:w-3/5 md:h-screen overflow-y-scroll'>
+    <div id="pacientsList" className='md:w-1/2 lg:w-3/5 md:h-screen overflow-y-scroll'>
         <h2 className='font-black text-3xl text-center'>
             Pacients List
         </h2>
